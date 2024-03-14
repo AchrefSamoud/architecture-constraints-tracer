@@ -1,71 +1,27 @@
-# architecture-constraints-tracer README
+# Architecture Constraints Tracer
 
-This is the README for your extension "architecture-constraints-tracer". After writing up a brief description, we recommend including the following sections.
+This is a Visual Studio Code extension that helps you to trace architecture constraints in your codebase. It allows you to register design patterns in your code and warns you when you're editing a part of the code that is part of a registered design pattern.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+1. **Register Design Pattern**: This feature allows you to register a design pattern in your code. You can select a part of your code in the active editor and register it under a key. The key, file path, and the start and end lines of the selection are saved in a JSON file.
 
-For example if there is an image subfolder under your extension project workspace:
+2. **Check Record**: This feature checks if the current line in the active editor is part of a registered design pattern. If it is, a warning message is displayed.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Usage
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. **Register Design Pattern**: To register a design pattern, select the part of the code that represents the design pattern in the active editor. Then, run the `architecture-constraints-tracer.registerDesignPattern` command. You will be asked to enter a key for the design pattern. The design pattern will be registered under this key.
 
-## Requirements
+2. **Check Record**: This feature is automatically triggered when you change the selection in the active editor. If the current line is part of a registered design pattern, a warning message will be displayed.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Installation
 
-## Extension Settings
+To install the extension, follow the standard procedure for installing Visual Studio Code extensions.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Contributing
 
-For example:
+Contributions are welcome. Please submit a pull request or create an issue to discuss the changes you want to make.
 
-This extension contributes the following settings:
+## License
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project is licensed under the MIT License.
